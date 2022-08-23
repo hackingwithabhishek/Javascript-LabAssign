@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="a" rows="5" cols="10" value=""></textarea>
+    <input type="button" id="btn" value=">" onclick="fn()" >
+    <textarea id="b" rows="5" cols="10"></textarea>
+    <script>
+        function fn()
+        {   
+            var x = document.getElementById("btn").value;
+            if(x == ">")
+            {
+                x.value = null;
+                document.getElementById("btn").value = "<";
+                document.getElementById("b").value = document.getElementById("a").value;
+                document.getElementById("a").value = "";
+            }
+            if(x == "<")
+            {
+                x.value = null;
+                document.getElementById("btn").value = ">";
+                document.getElementById("a").value = document.getElementById("b").value;
+                document.getElementById("b").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

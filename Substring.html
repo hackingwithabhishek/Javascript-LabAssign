@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finding Substring</title>
+</head>
+<body>
+    
+    <div id="Container">
+
+        <label for="str1">String 1 :</label><br>
+        <input type="text" id="str1" value="" required/><br><br>
+
+        <label for="str2">String 2 :</label><br>
+        <input type="text" id="str2" value="" required/><br><br>
+
+        <input type="button" value="Find" onclick="find()">
+        <input type="button" value="Reset" onclick="reset()"><br>
+        
+        <h3><label id="result">Sub String :</label></h3>
+
+    </div>
+
+    <script>
+
+        function reset()
+        {
+            document.getElementById("str1").value = "";
+            document.getElementById("str2").value = "";
+            document.getElementById("result").innerHTML = "Sub String :";
+        }
+
+
+        function find()
+        {   //alert("working");
+            var text = document.getElementById("str1").value;
+            var result = text.includes(document.getElementById("str2").value);
+            if(result == true)
+            {
+                document.getElementById("result").innerHTML = "Sub String : Found";
+            }    
+            else
+            {
+                document.getElementById("result").innerHTML = "Sub String : Not Found";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

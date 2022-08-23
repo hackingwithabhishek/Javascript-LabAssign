@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="Container">
+
+        <label for="num1">Number 1 :</label><br>
+        <input type="text" id="num1" value="0"/><br><br>
+
+        <label for="num2">Number 2 :</label><br>
+        <input type="text" id="num2" value="0"/><br><br>
+
+        <label for="sum">Sum :</label><br>
+        <input type="text" id="sum" value="0" disabled/><br><br>
+
+        <input type="button" value="Add" onclick="add()"/> 
+        <input type="button" value="Reset" onclick="reset()"/> 
+        
+    </div>
+
+<script type="text/javascript">
+    
+        function reset()
+        {
+            document.getElementById("num1").value = "0";
+            document.getElementById("num2").value = "0";
+            document.getElementById("sum").value = "0";
+        }
+
+        function add()
+        {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            var sum = a + b;
+            document.getElementById("sum").value = String(sum);
+        }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FORM</title>
+</head>
+
+<body>
+<h2>Click Any Element To See Its Value, Type, Style. </h2>
+    <form id="frm">
+        <div>
+            <h3>Pharagraph Area</h3>
+            <textarea id="p" rows="5" cols="`10" onclick="A('p')">Enter paragraph here</textarea><br><br>
+            <h3>Text Area</h3>
+            <input id="q" type="text" value="Text" onclick="A('q')" /><br><br>
+            <label>Check Box </label>
+            <input id="r" type="checkbox" onclick="A('r')" /><br><br>
+            <input id="s" type="button" value="Click ME" onclick="A('s')" />
+        </div>
+    </form>
+    <script>
+        function A(id) {    
+            // alert(id);
+            var x = document.getElementById(id);
+            alert("Value = " + x.value);
+            alert("Type  = " + x.type);
+            alert("Style = " + x.style);
+        }
+    </script>
+</body>
+
+</html>

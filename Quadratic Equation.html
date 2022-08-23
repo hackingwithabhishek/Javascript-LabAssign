@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <script>
+    function solve() {
+      var formObj = document.getElementById("linEq");
+      var a = Number(formObj.a.value);
+      var b = Number(formObj.b.value);
+      var c = Number(formObj.c.value);
+      var det = 2 * a;
+
+      formObj.x1.value = (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / det;
+      formObj.x2.value = (-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / det;
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Linear System Solver</h2>
+
+  <p>Input the coefficients into the linear system:</p>
+  <form id="linEq" action="#">
+    <table>
+      <tr>
+        <td><input type="text" size="4" name="a" /><b>x^2</b></td>
+        <td>+</td>
+        <td><input type="text" size="4" name="b" /><b>x</b></td>
+        <td>+</td>
+        <td><input type="text" size="4" name="c" /></td>
+        <td>=</td>
+        <td><b>0</b></td>
+      </tr>
+    </table>
+
+    <p><input type="button" value="Solve it" onclick="solve()" />
+      <input type="reset" value="Reset" /> </p>
+
+    <p>Solution: <b>x1</b> =
+      <input type="text" size="10" name="x1" />
+      <b>x2</b> =
+      <input type="text" size="10" name="x2" />
+    </p>
+  </form>
+</body>
+
+</html>

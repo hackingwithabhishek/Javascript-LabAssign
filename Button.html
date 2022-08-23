@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the "Create Button" button to create a BUTTON element with a "Button n" text.</p>
+
+<button type="button" id="btn" onclick="create()">Create Button</button>
+
+<script>
+    var i = 1;
+    function create() 
+    {
+        var a = document.getElementById("btn");
+        a.disabled = true;
+        var x = document.createElement("button");
+        var t = document.createTextNode("Button" + i);
+        x.appendChild(t);
+        document.body.appendChild(x);
+        i = i + 1;
+        x.onclick = function create1()  
+        {
+            x.onclick = create();
+            x.disabled = true;
+        };
+    }
+</script>
+
+</body>
+</html>

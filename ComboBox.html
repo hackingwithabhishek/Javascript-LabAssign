@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combo Box</title>
+</head>
+<body>
+    <h1>Combo Box Selection</h1><br>
+    <h3>First Combo Box : </h3>
+    <select id="cb1" onchange="disable()" value="Select">
+        <option>Select</option>
+        <option value="opt1">opt1</option>
+        <option value="opt2">opt2</option>
+        <option value="opt3">opt3</option>
+    </select>
+    <h3>Second Combo Box : </h3>
+    <select id="cb2" value="Select">
+        <option>Select</option>
+        <option value="opt1" id="1">opt1</option>
+        <option value="opt2" id="2">opt2</option>
+        <option value="opt3" id="3">opt3</option>
+    </select>
+
+    <script>
+
+        function disable()
+        {
+          var a = document.getElementById("cb1").value;
+          if(a == "opt1")
+          {
+            document.getElementById("1").disabled = true;
+            document.getElementById("2").disabled = false;
+            document.getElementById("3").disabled = false;
+          }
+          if(a == "opt2")
+          {
+            document.getElementById("1").disabled = false;
+            document.getElementById("2").disabled = true;
+            document.getElementById("3").disabled = false;
+          }
+          if(a == "opt3")
+          {
+            document.getElementById("1").disabled = false;
+            document.getElementById("2").disabled = false;
+            document.getElementById("3").disabled = true;
+          }
+        }
+
+    </script>
+</body>
+</html>
